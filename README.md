@@ -1,21 +1,29 @@
-# Create API ongkir on your own website
-PHP Class untuk mendapatkan ongkir Tiki dan JNE dalam format JSON langsung melalui web tiki-online.com &amp; jne.co.id dengan menggunakan cURL dan simple html dom.<h2>Install</h2><pre>&lt;?php
+# PHP Ongkir API
 
-// Include library ongkir
-require("lib/ongkir.php");
+PHP Class ongkos kirim [Tiki](tiki-online.com) &amp; [JNE](jne.co.id) dengan menggunakan [cURL](http://php.net/manual/en/book.curl.php) dan [DiDOM](https://github.com/Imangazaliev/DiDOM).
 
-// Create objek ongkir(dari, ke, berat)
-$ongkir = new ongkir('bandung', 'surabaya', 5);
+## Requirement
 
-// Menampilkan ongkir JNE
-echo $ongkir-&gt;jne();
+- [PHP 5.4+](https://secure.php.net/supported-versions.php)
+- [Multibyte String](http://php.net/manual/en/book.mbstring.php)
 
-/* Menampilkan ongkir TIKI
-echo $ongkir-&gt;tiki();
-*/
+## Install
 
-/* Menampilkan error
-echo $ongkir-&gt;errorcoy("Message");
-*/
+- Clone repo : ``git clone https://github.com/bachors/Ongkir-API.git``
+- Load dependencies : ``php composer install``
 
-?&gt;</pre>
+## Example
+
+```php
+require_once 'vendor/autoload.php';
+
+$ongkir = new Bachor\Ongkir('jakarta', 'padang', 10);
+
+echo $ongkir->tiki(); // ongkir tiki
+
+echo $ongkir->jne(); // ongkir jne
+```
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

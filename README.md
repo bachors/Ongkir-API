@@ -18,4 +18,4 @@ echo $ongkir-&gt;tiki();
 echo $ongkir-&gt;errorcoy("Message");
 */
 
-?&gt;</pre>
+?&gt;</pre><h3>Thanks for contribution. <a href="https://github.com/ncaneldiee/php-ongkir">Ongkir API</a>  by <a href="https://github.com/ncaneldiee/">ncaneldiee</a></h3>

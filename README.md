@@ -12,9 +12,9 @@ PHP Class ongkos kirim [Tiki](tiki-online.com) &amp; [JNE](jne.co.id) dengan men
 - Clone repo : ``git clone https://github.com/bachors/Ongkir-API.git``
 - Load dependencies : ``php composer install``
 
-## Quick Start
+## Example
 
-```
+```php
 require_once 'vendor/autoload.php';
 
 $ongkir = new Bachor\Ongkir('jakarta', 'padang', 10);

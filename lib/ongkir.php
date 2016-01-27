@@ -6,7 +6,7 @@ langsung melalui web tiki-online.com & jne.co.id
 dengan menggunakan cURL dan simple html dom.
 
 * Coded by Ican Bachors 2016.
-* http://ibacor.com/
+* http://ibacor.com/labs/ongkir-api
 * Updates will be posted to this site.
 *********************************************************************/
 

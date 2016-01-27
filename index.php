@@ -1,20 +1,13 @@
 <?php
 
-// Include library ongkir
-require("lib/ongkir.php");
+require_once 'vendor/autoload.php';
 
-// Create objek ongkir(dari, ke, berat)
-$ongkir = new ongkir('bandung', 'surabaya', 5);
+header('Access-Control-Allow-Origin: *');
 
-// Menampilkan ongkir JNE
-echo $ongkir->jne();
+header('Content-Type: application/json');
 
-/* Menampilkan ongkir TIKI
+$ongkir = new Bachor\Ongkir('jakarta', 'padang', 5);
+
 echo $ongkir->tiki();
-*/
 
-/* Menampilkan error
-echo $ongkir->errorcoy("Message");
-*/
-
-?>
+echo $ongkir->jne();

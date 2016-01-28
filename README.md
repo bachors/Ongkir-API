@@ -1,6 +1,6 @@
 # PHP Ongkir API
 
-PHP Class ongkos kirim [Tiki](tiki-online.com) &amp; [JNE](jne.co.id) dengan menggunakan [cURL](http://php.net/manual/en/book.curl.php) dan [DiDOM](https://github.com/Imangazaliev/DiDOM).
+PHP Class ongkos kirim [Tiki](http://tiki-online.com) &amp; [JNE](http://jne.co.id) dengan menggunakan [cURL](https://php.net/manual/en/book.curl.php) dan [DiDOM](https://github.com/Imangazaliev/DiDOM).
 
 ## Requirement
 

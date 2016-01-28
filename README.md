@@ -5,7 +5,7 @@ PHP Class ongkos kirim [Tiki](http://tiki-online.com) &amp; [JNE](http://jne.co.
 ## Requirement
 
 - [PHP 5.4+](https://secure.php.net/supported-versions.php)
-- [Multibyte String](http://php.net/manual/en/book.mbstring.php)
+- [Multibyte String](https://php.net/manual/en/book.mbstring.php)
 
 ## Install
 

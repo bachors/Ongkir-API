@@ -112,13 +112,13 @@ class Ongkir
 			$kec = '';
 			$keb = '';
 			foreach($hasil_dari as $hdr){
-				if($hdr->label == $this->dari){
+				if($hdr->label == strtoupper($this->dari)){
 					$daric .= $hdr->code;
 					$darib .= $hdr->label;
 				}
 			}
 			foreach($hasil_ke as $hke){
-				if($hke->label == $this->ke){
+				if($hke->label == strtoupper($this->ke)){
 					$kec .= $hke->code;
 					$keb .= $hke->label;
 				}

@@ -6,7 +6,7 @@ langsung melalui web tiki-online.com & jne.co.id
 dengan menggunakan cURL dan simple html dom.
 
 * Coded by Ican Bachors 2016.
-* http://ibacor.com/labs/ongkir-api
+* http://ibacor.com/
 * Updates will be posted to this site.
 *********************************************************************/
 
@@ -79,7 +79,7 @@ class Ongkir
 				}
 					
 				// Mengirim array untuk dijadikan JSON
-				return $this->successcoy('tiki', $result2);
+				return $this->successcoy($this->dari, $this->ke, 'tiki', $result2);
 			}
 		}
     }
@@ -107,10 +107,18 @@ class Ongkir
         if ($hasil_dari == null || $hasil_ke == null) {
             return $this->errorcoy('Nama kota tidak tersedia');
         } else {
-            $daric = $hasil_dari[0]->code;
-            $darib = $hasil_dari[0]->label;
-            $kec   = $hasil_ke[0]->code;
-            $keb   = $hasil_ke[0]->label;
+			foreach($hasil_dari as $hdr){
+				if($hdr->label == $this->dari){
+					$daric = $hdr->code;
+					$darib = $hdr->label;
+				}
+			}
+			foreach($hasil_ke as $hke){
+				if($hke->label == $this->ke){
+					$kec = $hke->code;
+					$keb = $hke->label;
+				}
+			}
 
             // Menentukan parameter dan menjalankan printah cURL menggunakan method POST
 			$url   = "http://www.jne.co.id/getDetailFare.php";
@@ -170,7 +178,7 @@ class Ongkir
 					}
 					
 					// Mengirim array untuk dijadikan JSON
-					return $this->successcoy('jne', $result2);
+					return $this->successcoy($darib, $keb, 'jne', $result2);
 				}
 			}
         }
@@ -204,13 +212,13 @@ class Ongkir
 
     
 	####################### OUTPUT JSON #######################
-    private function successcoy($service, $array)
+    private function successcoy($dari, $ke, $service, $array)
     {
         return json_encode(array(
             'status' => 'success',
             'service' => $service,
-            'dari' => $this->dari,
-            'ke' => $this->ke,
+            'dari' => $dari,
+            'ke' => $ke,
             'berat' => $this->kg,
             'ongkos' => $array
         ), JSON_PRETTY_PRINT);

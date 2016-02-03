@@ -107,16 +107,20 @@ class Ongkir
         if ($hasil_dari == null || $hasil_ke == null) {
             return $this->errorcoy('Nama kota tidak tersedia');
         } else {
+			$daric = '';
+			$darib = '';
+			$kec = '';
+			$keb = '';
 			foreach($hasil_dari as $hdr){
 				if($hdr->label == $this->dari){
-					$daric = $hdr->code;
-					$darib = $hdr->label;
+					$daric .= $hdr->code;
+					$darib .= $hdr->label;
 				}
 			}
 			foreach($hasil_ke as $hke){
 				if($hke->label == $this->ke){
-					$kec = $hke->code;
-					$keb = $hke->label;
+					$kec .= $hke->code;
+					$keb .= $hke->label;
 				}
 			}
 
